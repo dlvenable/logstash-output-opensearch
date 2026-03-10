@@ -13,7 +13,7 @@ require "logstash/outputs/opensearch/template_manager"
 describe LogStash::Outputs::OpenSearch::TemplateManager do
 
   describe ".default_template_path" do
-    [7, 1, 2].each do |major_version|
+    [7, 1, 2, 3].each do |major_version|
       [:disabled, :v1, :v8].each do |ecs_ver|
         [true, false].each do |legacy_template|
           context "when ECS is #{ecs_ver} with OpenSearch #{major_version}.x legacy_template:#{legacy_template}" do
